@@ -8,6 +8,7 @@ import {
   STOP_TRACK,
   UPDATE_STARTED_COUNT,
 } from "../../store/actions";
+import s from "./beatContainer.module.css";
 
 const BeatContainer = ({
   firstStarted,
@@ -89,7 +90,10 @@ const BeatContainer = ({
     onUSC(-1);
   };
   return (
-    <div className={`sound-row ${singleSample.id}`} key={singleSample.id}>
+    <div
+      className={`${s.soundRow} ${s[singleSample.id]}`}
+      key={singleSample.id}
+    >
       {singleSample.sprites.map((item) => {
         const id = `${singleSample.id}_${item.id}`;
         let className = "";
@@ -97,10 +101,10 @@ const BeatContainer = ({
           item.id === playingId ? stopPlay : () => startPlay(item.id);
 
         if (playingId === item.id) {
-          className = "active";
+          className = s.active;
         }
         if (waitingId === item.id) {
-          className = `pulse-background-${singleSample.id}`;
+          className = s[`pulse_background_${singleSample.id}`];
         }
 
         return (

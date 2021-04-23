@@ -1,0 +1,108 @@
+.soundContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: -webkit-fill-available;
+  height: -moz-fill-available;
+  height: fill-available;
+  margin: 0 auto;
+}
+.soundContainer h1 {
+  text-align: center;
+  color: #fff;
+  font-family: "Monument Extended", sans-serif;
+  font-size: 18px;
+  line-height: 12vh;
+}
+.soundContainer h1 span {
+  color: #f6273f;
+}
+.popupRotateContainer {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #0d0d0d;
+}
+.popupRotate {
+  width: 80%;
+  height: 80%;
+  color: #fff;
+  font-family: "Monument Extended", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #951827;
+  border-radius: 3px;
+  background: url("../../assets/images/svg/wawe_bg_bottom.svg") no-repeat bottom;
+  background-size: contain;
+  margin: 10vh auto 0;
+  box-shadow: 0 0 4px 4px #f6273f;
+}
+.popupRotate p {
+  margin-top: 10vh;
+}
+.beatsWrapper {
+  padding: 0 8vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.controls {
+  height: 14vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8vw;
+  background: url("../../assets/images/svg/wawe_bg_bottom.svg") top no-repeat;
+  background-size: cover;
+}
+.close,
+.stop {
+  font-family: "Monument Extended", sans-serif;
+  text-transform: uppercase;
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+.close {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.stop {
+  font-size: 12px;
+  color: #951827;
+}
+@media screen and (orientation: landscape) {
+  .popupRotateContainer {
+    display: block;
+  }
+}
+@media screen and (max-width: 360px) {
+  .soundContainer h1 {
+    line-height: 8vh;
+  }
+  .controls {
+    height: 14vh;
+  }
+}
+@media screen and (min-width: 415px) {
+  .soundContainer h1 {
+    font-size: 24px;
+  }
+  .beatsWrapper {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 414px;
+  }
+  .beatsWrapper button {
+    max-height: 80px;
+  }
+  .close,
+  .stop {
+    font-size: 18px;
+  }
+}

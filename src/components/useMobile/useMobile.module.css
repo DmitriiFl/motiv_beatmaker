@@ -1,0 +1,24 @@
+.wrapper {
+  background: url("../../assets/images/svg/wawe_bg_bottom.svg") bottom no-repeat;
+  background-size: contain;
+}
+.container {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  color: #f6273f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  margin-top: 10vh;
+  font-family: "Monument Extended", sans-serif;
+  font-size: 4vh;
+}
+.qr {
+  margin-top: 10vh;
+}
+.qr img {
+  width: 40vh;
+}
